@@ -1,3 +1,10 @@
-# prompt: muestrame las columnas del archivo BASE DE DATOS.csv
+# prompt: usando streamlit muestrame las columnas del archivo BASE DE DATOS.csv
 
-df.columns
+import streamlit as st
+import pandas as pd
+
+excel_file_path = "BASE DE DATOS.xlsx"
+df = pd.read_excel(excel_file_path)
+
+st.write("Las columnas del archivo BASE DE DATOS.xlsx son:")
+st.write(df.columns.tolist())
