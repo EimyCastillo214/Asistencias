@@ -1,16 +1,7 @@
-# prompt: leer en streamlit archivo .xlsx
+# prompt: leer en archivo BASE DE DATOS.csv
 
-import streamlit as st
 import pandas as pd
 
-st.title("Read .xlsx file in Streamlit")
+df = pd.read_csv('BASE DE DATOS.csv')
 
-uploaded_file = st.file_uploader("Upload an .xlsx file", type="xlsx")
-
-if uploaded_file is not None:
-  try:
-    df = pd.read_excel(uploaded_file)
-    st.write("Here's a preview of the data:")
-    st.dataframe(df)
-  except Exception as e:
-    st.error(f"Error reading the file: {e}")
+print(df.head())
