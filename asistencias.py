@@ -1,7 +1,6 @@
-# prompt: leer en archivo BASE DE DATOS.csv
+# prompt: leer archivo BASE DE DATOS.csv
 
 import pandas as pd
-
-df = pd.read_csv('BASE DE DATOS.csv')
-
-print(df.head())
+excel_file_path = "BASE DE DATOS.xlsx"
+df = pd.read_excel(excel_file_path)
+print(df.to_string())
