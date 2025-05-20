@@ -1,4 +1,4 @@
-# prompt: leer archivo BASE DE DATOS.xlsx
+# prompt: leer archivo BASE DE DATOS.csv
 
 import pandas as pd
 
